@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Horizon - Sitio Web Oficial</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/LOGO.jpeg" alt="Toxic Horizon Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#trailer">Tráiler</a></li>
+                    <li><a href="#lore">Lore</a></li>
+                    <li><a href="#characters">Personajes</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#download">Descargar APK</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-header">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>RECLAMA TU FUTURO.</h1>
+                <h2>Enfréntate al apocalipsis. Domina el horizonte.</h2>
+                <div class="hero-btns">
+                    <a href="#trailer" class="btn-primary">Ver Tráiler</a>
+                </div>
+            </div>
+            <div class="hero-interactive-element">
+                <img src="img/header.webp" alt="Personaje Principal" class="floating-character">
+            </div>
+        </div>
+    </section>
+
+    <section id="trailer" class="trailer-section">
+        <div class="section-container">
+            <h2>TRÁILER DE REVELACIÓN</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="lore" class="lore-characters-section">
+        <div class="section-container">
+            <h2>LORE &amp; FACCIONES</h2>
+            <div class="card-grid">
+                <!-- Tarjeta 1: La Catástrofe -->
+                <div class="interactive-card">
+                    <h3>El Gran Colapso</h3>
+                    <p>La Tercera Guerra Mundial dejó un planeta sumergido en radiación, desechos tóxicos y ecosistemas al borde de la extinción.</p>
+                    <button class="card-link btn-modal" data-target="modal-colapso">Leer más</button>
+                </div>
+
+                <!-- Tarjeta 2: Las Aberraciones -->
+                <div class="interactive-card">
+                    <h3>Las Criaturas Mutadas</h3>
+                    <p>Engendradas por la lluvia radiactiva y experimentos militares fuera de control, acechan a los últimos refugios humanos.</p>
+                    <button class="card-link btn-modal" data-target="modal-criaturas">Leer más</button>
+                </div>
+
+                <!-- Tarjeta 3: El Protagonista -->
+                <div class="interactive-card">
+                    <h3>Kaell: El Sobreviviente</h3>
+                    <p>Tras perder su hogar en un brutal ataque, Kaell se une a la resistencia para rescatar el futuro de la humanidad.</p>
+                    <button class="card-link btn-modal" data-target="modal-kaell">Leer más</button>
+                </div>
+
+                <!-- Tarjeta 4: La Esperanza -->
+                <div class="interactive-card">
+                    <h3>Las Semillas del Edén</h3>
+                    <p>Una tecnología avanzada capaz de purificar la radiación y restaurar la vida biológica en las zonas muertas.</p>
+                    <button class="card-link btn-modal" data-target="modal-semillas">Leer más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="media-gallery-section">
+        <div class="section-container">
+            <h2>GALERÍA DE MEDIOS</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glowing-item"><img src="img/personaje2.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje3.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje4.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje5.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje6.jpeg" alt="Captura de Pantalla 2"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="section-container">
+            <p>&copy; 2026 Toxic Horizon Studio. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">X / Twitter</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         VENTANAS MODALES (HISTORIA Y LORE DE TOXIC HORIZON)
+    ============================================================= -->
+
+    <!-- Modal 1: El Gran Colapso -->
+    <div id="modal-colapso" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>EL GRAN COLAPSO</h2>
+            <div class="modal-body">
+                <p>La Tercera Guerra Mundial no solo devastó las ciudades con armamento 
+                    nuclear y biológico, sino que destruyó el equilibrio ecológico del planeta.
+                     La contaminación química extrema y la lluvia radiactiva convirtieron la 
+                     atmósfera en un entorno letal.</p>
+                <p>Los pocos sobrevivientes que quedan en la Tierra se ven obligados a 
+                    vivir hacinados en campamentos improvisados y refugios subterráneos, 
+                    luchando a diario por agua limpia, alimentos y medicinas en un mundo 
+                    sin vida natural.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Las Criaturas Mutadas -->
+    <div id="modal-criaturas" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>LAS ABERRACIONES DEL HORIZONTE</h2>
+            <div class="modal-body">
+                <p>De la combinación de desechos tóxicos, radiación acumulada 
+                    y proyectos de una Inteligencia Artificial militar que operaba 
+                    sin supervisión durante la guerra, nacieron las criaturas mutadas.</p>
+                <p>Estas abominaciones no son simples animales radioactivos; 
+                    poseen un comportamiento hostil coordinado y avanzan 
+                    constantemente hacia las zonas habitadas para erradicar 
+                    cualquier rastro de vida humana.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Kaell -->
+    <div id="modal-kaell" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAELL: EL CAMINO DEL SOBREVIVIENTE</h2>
+            <div class="modal-body">
+                <p>El jugador encarna a Kaell, un joven sobreviviente cuya vida cambia 
+                    drásticamente cuando su refugio es arrasado por una horda de mutantes. 
+                    Tras ser rescatado por un grupo de exploradores, se une a sus filas.</p>
+                <p>Su misión consistirá en adentrarse en los territorios más peligrosos, 
+                    recolectar recursos clave para los campamentos de sobrevivientes y 
+                    desentrañar los oscuros secretos de la I.A. militar que originó el 
+                    apocalipsis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Las Semillas del Edén -->
+    <div id="modal-semillas" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>LAS SEMILLAS DEL EDÉN</h2>
+            <div class="modal-body">
+                <p>Las "Semillas del Edén" representan la única oportunidad real para la Tierra. 
+                    Son dispositivos tecnológicos de alta ingeniería diseñados para neutralizar la 
+                    contaminación y la radiación a nivel molecular.</p>
+                <p>Al desplegar una Semilla del Edén en un sector infectado, 
+                    el jugador logra purificar el aire y la tierra, devolviendo la vegetación y 
+                    creando zonas seguras donde la vida humana puede prosperar de nuevo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
