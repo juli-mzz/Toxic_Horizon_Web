@@ -70,3 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// CONTROL DE MENÚS DESPLEGABLES EN CASCADA
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+dropdownItems.forEach(item => {
+    const trigger = item.querySelector('.dropdown-trigger');
+
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Cierra cualquier otro desplegable abierto
+        dropdownItems.forEach(other => {
+            if (other !== item) other.classList.remove('active');
+        });
+        item.classList.toggle('active');
+    });
+});
+
+// Cerrar cualquier menú al hacer clic en un enlace interno o fuera del menú
+document.addEventListener('click', (e) => {
+    dropdownItems.forEach(item => {
+        if (!item.contains(e.target)) {
+            item.classList.remove('active');
+        }
+    });
+});

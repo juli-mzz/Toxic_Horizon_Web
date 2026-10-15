@@ -4,29 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toxic Horizon - Sitio Web Oficial</title>
+
+    <!-- PWA Configuración -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080808">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/logosinfondo.png">
     
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="img/LOGO.jpeg" alt="Toxic Horizon Logo">
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#hero">Inicio</a></li>
-                    <li><a href="#trailer">Tráiler</a></li>
-                    <li><a href="#lore">Lore</a></li>
-                    <li><a href="#characters">Personajes</a></li>
-                    <li><a href="#gallery">Galería</a></li>
-                    <li><a href="#download">Descargar APK</a></li>
-                </ul>
-            </nav>
+    <div class="header-container">
+        <div class="logo">
+            <a href="#hero"><img src="img/logosinfondo.png" alt="Toxic Horizon Logo"></a>
         </div>
-    </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
 
+                <!-- Desplegable 1: El Juego (Puntos 2, 3, 4, 5, 6) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        El Juego <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Universo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#descripcion">Historia y Lore</a></li>
+                                    <li><a href="#caracteristicas">Mecánicas de Juego</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Multimedia</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#trailer">Tráiler Oficial</a></li>
+                                    <li><a href="#gallery">Galería de Capturas</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Guía</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#tutorial">Controles y Reglas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 2: Descarga e Instalación (Puntos 7, 8, 9) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Jugar <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Instalador</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#descarga">Descarga APK</a></li>
+                                    <li><a href="#instalacion">Guía de Instalación</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Compatibilidad</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#requisitos">Requisitos Mínimos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 3: Proyecto (Puntos 10, 11, 12, 19) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Proyecto <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Desarrollo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#desarrollo">Bitácora de Sprints</a></li>
+                                    <li><a href="#tecnologias">Stack y Motor</a></li>
+                                    <li><a href="#declaracion-ia">Uso de I.A.</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Equipo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#equipo">Integrantes y Roles</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 4: Legal & Contacto (Puntos 13, 14, 15, 16, 17, 18) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Legal <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Normativa</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#creditos-licencias">Créditos y Recursos</a></li>
+                                    <li><a href="#licencias">Licencias de Código</a></li>
+                                    <li><a href="#privacidad">Aviso de Privacidad</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Avisos</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#advertencias">Clasificación y Contenido</a></li>
+                                    <li><a href="#disclaimer">Descargo Académico</a></li>
+                                    <li><a href="#contacto">Contacto y Soporte</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#descarga" class="btn-primary-mini">Descargar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- 4. TRÁILER & 5. GALERÍA (#trailer y #gallery ya los tienes definidos) -->
     <section id="hero" class="hero-header">
         <div class="hero-content">
             <div class="hero-text">
@@ -37,19 +150,78 @@
                 </div>
             </div>
             <div class="hero-interactive-element">
-                <img src="img/header.webp" alt="Personaje Principal" class="floating-character">
+                <img src="img/logosinfondo.png" alt="Personaje Principal" class="floating-character">
             </div>
         </div>
     </section>
 
     <section id="trailer" class="trailer-section">
-        <div class="section-container">
-            <h2>TRÁILER DE REVELACIÓN</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="section-container">
+        <h2>TRÁILER DE REVELACIÓN</h2>
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/3EfLGTf4Y-8" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- 2. DESCRIPCIÓN & 3. CARACTERÍSTICAS -->
+<section id="descripcion" class="content-section">
+    <div class="section-container">
+        <h2>SOBRE TOXIC HORIZON</h2>
+        <div class="card-grid">
+            <div class="interactive-card">
+                <h3>Ficha Técnica</h3>
+                <p><strong>Género:</strong> Acción y Supervivencia Postapocalíptica.</p>
+                <p><strong>Público Objetivo:</strong> Jugadores mayores de 12 años interesados en gestión de recursos, exploración táctica y combate reactivo.</p>
+                <p><strong>Objetivo:</strong> Videojuego interactivo que fomente la educación ambiental mediante dinámicas 
+                    de juego enfocadas en la recuperación y restauración de los ecosistemas mediante combates RPG/daugeons.</p>
+            </div>
+            <div class="interactive-card" id="caracteristicas">
+                <h3>Características Clave</h3>
+                <ul class="bullet-list">
+                    <li>Sistema de combate cuerpo a cuerpo y a distancia contra mutantes adaptativos.</li>
+                    <li>Mecánica de purificación de biomas en tiempo real.</li>
+                    <li>Gestión de oxígeno, radiación y recursos de supervivencia.</li>
+                    <li>Eventos climáticos radiactivos aleatorios.</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- 6. TUTORIAL Y CONTROLES -->
+<section id="tutorial" class="content-section">
+    <div class="section-container">
+        <h2>INSTRUCCIONES Y CONTROLES</h2>
+        <div class="card-grid">
+            <div class="interactive-card">
+                <h3>Reglas de Supervivencia</h3>
+                <p>1. Mantén vigilado tu medidor de radiación en las zonas rojas.</p>
+                <p>2. Recolecta componentes biológicos para sintetizar combustible de purificación.</p>
+                <p>3. Regresa al refugio antes de que caiga la tormenta ácida.</p>
+            </div>
+            <div class="interactive-card">
+                <h3>Controles (Móvil / Pantalla Táctil)</h3>
+                <table class="data-table">
+                    <tr><th>Acción</th><th>Control</th></tr>
+                    <tr><td>Mover a Kaell</td><td>Joystick Virtual Izquierdo</td></tr>
+                    <tr><td>Ataque / Disparo</td><td>Botón A (Derecha)</td></tr>
+                    <tr><td>Semilla del Edén</td><td>Botón B (Interacción)</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section id="lore" class="lore-characters-section">
         <div class="section-container">
@@ -57,6 +229,7 @@
             <div class="card-grid">
                 <!-- Tarjeta 1: La Catástrofe -->
                 <div class="interactive-card">
+                    
                     <h3>El Gran Colapso</h3>
                     <p>La Tercera Guerra Mundial dejó un planeta sumergido en radiación, desechos tóxicos y ecosistemas al borde de la extinción.</p>
                     <button class="card-link btn-modal" data-target="modal-colapso">Leer más</button>
@@ -95,24 +268,121 @@
                 <div class="gallery-item glowing-item"><img src="img/personaje4.jpeg" alt="Captura de Pantalla 2"></div>
                 <div class="gallery-item glowing-item"><img src="img/personaje5.jpeg" alt="Captura de Pantalla 2"></div>
                 <div class="gallery-item glowing-item"><img src="img/personaje6.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje7.jpeg" alt="Captura de Pantalla 2"></div>
+                <div class="gallery-item glowing-item"><img src="img/personaje8.jpeg" alt="Captura de Pantalla 2"></div>
             </div>
         </div>
     </section>
+
+    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN -->
+<section id="descarga" class="content-section download-box">
+    <div class="section-container">
+        <h2>ZONA DE DESCARGA</h2>
+        <div class="card-grid">
+            <div class="interactive-card">
+                <h3>Versión Oficial</h3>
+                <p><strong>Versión:</strong> Build 1.0.0 (Beta Académica)</p>
+                <p><strong>Plataforma:</strong> Android (APK)</p>
+                <p><strong>Tamaño:</strong> 145 MB</p>
+                <a href="descargas/ToxicHorizon_v1.0.apk" download class="btn-primary" style="display:inline-block; margin-top:15px;">Descargar APK Directo</a>
+            </div>
+            <div class="interactive-card" id="requisitos">
+                <h3>Requisitos del Sistema</h3>
+                <ul class="bullet-list">
+                    <li><strong>SO:</strong> Android 9.0 (Pie) o superior.</li>
+                    <li><strong>Procesador:</strong> Octa-core 2.0 GHz o equivalente.</li>
+                    <li><strong>Memoria RAM:</strong> 3 GB mínimo (4 GB recomendado).</li>
+                    <li><strong>Almacenamiento:</strong> 300 MB de espacio libre disponible.</li>
+                </ul>
+            </div>
+            <div class="interactive-card" id="instalacion">
+                <h3>Pasos de Instalación</h3>
+                <ol class="numbered-list">
+                    <li>Descarga el archivo <code>.apk</code> desde el botón superior.</li>
+                    <li>En los ajustes de tu dispositivo, activa "Instalar aplicaciones de fuentes desconocidas".</li>
+                    <li>Abre tu administrador de archivos y selecciona el APK descargado.</li>
+                    <li>Concede los permisos básicos de almacenamiento e inicia el juego.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 10. DESARROLLO, 11. EQUIPO, 12. TECNOLOGÍAS Y 19. USO DE IA -->
+<section id="desarrollo" class="content-section">
+    <div class="section-container">
+        <h2>DESARROLLO Y PRODUCCIÓN</h2>
+        <div class="card-grid">
+            <div class="interactive-card">
+                <h3>Bitácora de Sprints</h3>
+                <p><strong>Sprint 1:</strong> Prototipado, concepto visual y lógica básica de movimiento.</p>
+                <p><strong>Sprint 2:</strong> Programación de mecánicas de mutantes y sistema de ataque.</p>
+                <p><strong>Sprint 3:</strong> Implementación de las Semillas del Edén, balance y corrección de bugs.</p>
+            </div>
+            <div class="interactive-card" id="equipo">
+                <h3>Equipo de Desarrollo</h3>
+                <ul class="bullet-list">
+                    <li><strong>Desarrollador / Programación General:</strong> Martha Julieta González Meléndez</li>
+                    <li><strong>Colaboradores / Diseño y Arte:</strong> Equipo Toxic Horizon</li>
+                </ul>
+            </div>
+            <div class="interactive-card" id="tecnologias">
+                <h3>Tecnologías Utilizadas</h3>
+                <p><strong>Motor / Entorno:</strong> Motor de juego compatible móvil / Entorno Web.</p>
+                <p><strong>Lenguajes:</strong> C# / JavaScript / HTML5.</p>
+                <p><strong>Herramientas:</strong> Visual Studio Code, Git, Photoshop / Canva.</p>
+            </div>
+            <div class="interactive-card" id="declaracion-ia">
+                <h3>Declaración de Uso de I.A.</h3>
+                <p>Se utilizaron herramientas de Inteligencia Artificial como asistentes de apoyo técnico para la estructuración y depuración de código web, así como para la generación de borradores de arte conceptual inicial y elementos de ambientación.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 13 a 18: LEGAL, CRÉDITOS, ADVERTENCIAS Y CONTACTO -->
+<section id="creditos-licencias" class="content-section">
+    <div class="section-container">
+        <h2>MARCO LEGAL Y CRÉDITOS</h2>
+        <div class="legal-grid">
+            <div class="interactive-card" id="creditos">
+                <h3>Créditos y Recursos</h3>
+                <p>Efectos de sonido y texturas ambientales obtenidos de librerías de uso libre (Freesound / OpenGameArt bajo licencia CC0).</p>
+            </div>
+            <div class="interactive-card" id="licencias">
+                <h3>Licencias</h3>
+                <p>El código fuente y la documentación académica se distribuyen bajo la licencia <strong>MIT</strong>. Los activos de marca y logotipos pertenecen al equipo del proyecto.</p>
+            </div>
+            <div class="interactive-card" id="privacidad">
+                <h3>Aviso de Privacidad</h3>
+                <p>Toxic Horizon no recopila, almacena ni transmite ningún tipo de dato personal, ubicación geográfica ni información sensible del usuario.</p>
+            </div>
+            <div class="interactive-card" id="advertencias">
+                <h3>Advertencias y Clasificación</h3>
+                <p><strong>Clasificación Sugerida:</strong> Teen (T / +13). Contiene escenas de combate con monstruos, atmósfera de tensión y efectos visuales de radiación.</p>
+            </div>
+            <div class="interactive-card" id="disclaimer">
+                <h3>Descargo de Responsabilidad</h3>
+                <p>Este proyecto tiene fines estrictamente académicos. Se entrega "tal cual" (as-is), sin garantías explícitas de compatibilidad en todos los dispositivos comerciales.</p>
+            </div>
+            <div class="interactive-card" id="contacto">
+                <h3>Contacto</h3>
+                <p>Para reportes de fallos técnicos, dudas sobre la entrega o consultas académicas, contáctanos a través del repositorio oficial de GitHub del proyecto.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer class="main-footer">
         <div class="section-container">
             <p>&copy; 2026 Toxic Horizon Studio. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="#">X / Twitter</a>
-                <a href="#">TikTok</a>
                 <a href="#">YouTube</a>
             </div>
         </div>
     </footer>
 
-    <!-- ============================================================
-         VENTANAS MODALES (HISTORIA Y LORE DE TOXIC HORIZON)
-    ============================================================= -->
+    <!-- VENTANAS MODALES (HISTORIA Y LORE DE TOXIC HORIZON) -->
 
     <!-- Modal 1: El Gran Colapso -->
     <div id="modal-colapso" class="modal-overlay">
